@@ -27,16 +27,3 @@ class WindSpeed(models.Model):
     wind_speed = models.DecimalField(default=00.00, max_digits=4, decimal_places=2)
     def __str__(self):
         return str(self.wind_speed)
-
-class ActualPrecipitation(models.Model):
-    probability = models.DecimalField(default=00.00, max_digits=4, decimal_places=2)
-    #negative if provided = false
-    def __str__(self):
-        return str(self.probability)
-
-class ProvidedActual(models.Model):
-    provided = models.BooleanField(default=False)
-    #makes probability of rain negative
-    #does not allow for error calculations if false
-    def __str__(self):
-        return str(self.provided)
