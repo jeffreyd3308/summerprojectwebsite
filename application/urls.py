@@ -4,5 +4,6 @@ from .views import *
 from .views import *
 
 urlpatterns = [
-    path('', FrontendAppView.as_view(), name='home'),
+    path('', index),
+    path('<path:path>', index),
 ]

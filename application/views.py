@@ -3,5 +3,5 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView
 
 # Create your views here.
-class FrontendAppView(TemplateView):
-    template_name = 'index.html'
+def index(request, path=None):
+    return render(request, 'index.html')
