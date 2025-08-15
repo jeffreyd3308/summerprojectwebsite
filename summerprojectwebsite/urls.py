@@ -19,5 +19,6 @@ from django.urls import path, include, re_path
 from application.views import *
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     re_path(r'^.*$', index),
 ]

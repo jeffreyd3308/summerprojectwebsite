@@ -1,9 +1,7 @@
-from django.urls import path
-from .views import *
-
+from django.contrib import admin
+from django.urls import path, re_path, include
+from rest_framework.routers import DefaultRouter
 from .views import *
 
 urlpatterns = [
-    path('', index),
-    path('<path:path>', index),
 ]
